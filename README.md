@@ -95,6 +95,6 @@ To execute the automated test suite and generate reports, follow the steps below
 
 
 ## Test Results
-```
-![Test Screenshot](Reports/TestScreenshot.png)
-```
+
+![Test Screenshot](https://github.com/sakshinitnaware/Python-Project-1/blob/main/Reports/TestScreenshort.PNG)
+
