@@ -18,7 +18,7 @@ assurance teams aiming to automate UI testing for web apps in an efficient and o
 - Python
 
 ## 📁 Folder Structure
-
+```
 Project-1/
 │
 ├── pages/
@@ -47,7 +47,7 @@ Project-1/
 │ └── test_guvi.py
 │
 ├── environment_setup.py
-
+```
 
 - pages/: Page classes for modular automation
 - locators/: Centralized locator storage
