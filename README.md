@@ -1,15 +1,15 @@
 # GUVI Web Application - Automation Testing Framework
 
-## This project is an automation testing framework built to validate key functionalities of the GUVI Web Application. Using Selenium, Pytest, and 
-## the Page Object Model (POM) design pattern, the framework ensures modularity, readability, and ease of maintenance.
-## The primary focus is on automating and verifying core workflows like login, signup, dashboard UI elements, and logout. 
-## POM is used to separate test logic from page interactions, making the codebase scalable and easy to update when UI changes occur. 
-## Locators and test data are maintained centrally to enhance control and reduce redundancy.The framework supports cross-browser testing 
-## and headless execution, making it suitable for both local runs and CI/CD pipelines. It generates structured JSON reports on every run 
-## and includes logic to re-run failed tests to capture flaky behavior. A merged HTML report compiles the results from multiple retries, 
-## showing each test case’s outcomes across trials and summarizing their final status.This project serves as a robust foundation for web 
-## automation, with flexible architecture and clear reporting. It's ideal for quality 
-## assurance teams aiming to automate UI testing for web apps in an efficient and organized manner.
+**This project is an automation testing framework built to validate key functionalities of the GUVI Web Application. Using Selenium, Pytest, and 
+the Page Object Model (POM) design pattern, the framework ensures modularity, readability, and ease of maintenance.
+The primary focus is on automating and verifying core workflows like login, signup, dashboard UI elements, and logout. 
+POM is used to separate test logic from page interactions, making the codebase scalable and easy to update when UI changes occur. 
+Locators and test data are maintained centrally to enhance control and reduce redundancy.The framework supports cross-browser testing 
+and headless execution, making it suitable for both local runs and CI/CD pipelines. It generates structured JSON reports on every run 
+and includes logic to re-run failed tests to capture flaky behavior. A merged HTML report compiles the results from multiple retries, 
+showing each test case’s outcomes across trials and summarizing their final status.This project serves as a robust foundation for web 
+automation, with flexible architecture and clear reporting. It's ideal for quality 
+assurance teams aiming to automate UI testing for web apps in an efficient and organized manner.**
 
 ## 🔧 Tech Stack
 - Selenium
@@ -18,35 +18,35 @@
 - Python
 
 ## 📁 Folder Structure
+
 Project-1/
 │
 ├── pages/
-│   ├── login_page.py
-│   ├── sign_up_page.py
-│   └── dashboard_page.py
+│ ├── login_page.py
+│ ├── sign_up_page.py
+│ └── dashboard_page.py
 │
-├── Reports
-    ├── assets
-    ├── firsttest_report.json
-    ├── merge_report_script.py
-    ├── merged_final_report.html
-    ├── merged_report.json
-    ├── retest_report1.json
-    ├── retest_report2.json
-    ├── retest_report3.json
-    └──  retest_report4.json
-│    
+├── Reports/
+│ ├── assets/
+│ ├── firsttest_report.json
+│ ├── merge_report_script.py
+│ ├── merged_final_report.html
+│ ├── merged_report.json
+│ ├── retest_report1.json
+│ ├── retest_report2.json
+│ ├── retest_report3.json
+│ └── retest_report4.json
+│
 ├── locators/
-│   └── locators.py
+│ └── locators.py
 │
 ├── data/
-│   └── test_data.py
+│ └── test_data.py
 │
 ├── tests/
-│   └── test_guvi.py
+│ └── test_guvi.py
 │
-└── environment_setup.py
-
+├── environment_setup.py
 
 
 - pages/: Page classes for modular automation
