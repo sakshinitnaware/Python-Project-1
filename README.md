@@ -94,5 +94,7 @@ To execute the automated test suite and generate reports, follow the steps below
   python merge_report_script.py
 
 
-## Test Results 
+## Test Results
+```
 ![Test Screenshot](Reports/TestScreenshot.png)
+```
