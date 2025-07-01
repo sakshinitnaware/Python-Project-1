@@ -1,5 +1,3 @@
-# # Environment setup code for driver function
-
 # Environment setup code for cross-browser driver function
 
 import pytest
@@ -14,60 +12,46 @@ from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.firefox import GeckoDriverManager
 from webdriver_manager.microsoft import EdgeChromiumDriverManager
 
-
 @pytest.fixture(scope="function")
 def setup():
     driver = None
 
     try:
-        # Try launching Chrome
+        # Try launching Chrome in headless mode
         chrome_options = ChromeOptions()
-        chrome_options.add_argument("--start-maximized")
+        chrome_options.add_argument("--headless=new")
+        chrome_options.add_argument("--no-sandbox")
+        chrome_options.add_argument("--disable-dev-shm-usage")
+        chrome_options.add_argument("--window-size=1920,1080")
         driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=chrome_options)
-        print("Launched Chrome browser.")
+        print("Launched Chrome in headless mode.")
     except Exception as e1:
         print("Chrome not available:", e1)
         try:
-            # Try launching Firefox
+            # Try launching Firefox in headless mode
             firefox_options = FirefoxOptions()
-            firefox_options.add_argument("--start-maximized")
+            firefox_options.add_argument("--headless")
+            firefox_options.add_argument("--no-sandbox")
+            firefox_options.add_argument("--disable-dev-shm-usage")
+            firefox_options.add_argument("--window-size=1920,1080")
             driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()), options=firefox_options)
-            print("Launched Firefox browser.")
+            print("Launched Firefox in headless mode.")
         except Exception as e2:
             print("Firefox not available:", e2)
             try:
-                # Try launching Edge
+                # Try launching Edge in headless mode
                 edge_options = EdgeOptions()
-                edge_options.add_argument("--start-maximized")
+                edge_options.add_argument("--headless=new")
+                edge_options.add_argument("--no-sandbox")
+                edge_options.add_argument("--disable-dev-shm-usage")
+                edge_options.add_argument("--window-size=1920,1080")
                 driver = webdriver.Edge(service=EdgeService(EdgeChromiumDriverManager().install()), options=edge_options)
-                print("Launched Edge browser.")
+                print("Launched Edge in headless mode.")
             except Exception as e3:
                 print("Edge not available:", e3)
-                raise Exception("No supported browser is available on this system.")
+                raise Exception("No supported browser is available in headless mode on this system.")
 
-    # Open target URL
+    # Load target website
     driver.get("https://www.guvi.in")
     yield driver
     driver.quit()
-
-
-
-
-# # Importing the pytest module and Selenium WebDriver 
-# import pytest
-# from selenium import webdriver
-
-# # Defining a fixture in pytest with function-level scope
-# @pytest.fixture(scope="function")
-# def setup():
-#     # Creating a new Chrome browser instance
-#     driver = webdriver.Chrome()
-#     # Maximizing the browser window for better visibility
-#     driver.maximize_window()
-#     # Navigating to the GUVI website
-#     driver.get("https://www.guvi.in")
-#     # Yielding the driver instance to the test for execution
-#     yield driver
-#     # Closing the browser after the test is complete
-#     driver.quit()
-

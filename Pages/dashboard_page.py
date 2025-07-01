@@ -22,6 +22,7 @@ class DashboardPage:
             print("starting the menu bar test case")
             # If current URL is not homepage, click on GUVI logo to go to homepage
             sleep(10)
+            self.wait.until(EC.element_to_be_clickable((By.XPATH, locator.LATER_BUTTON))).click()
             print("Current URL:", self.driver.current_url)
             if "courses" in self.driver.current_url or "dashboard" in self.driver.current_url:
                 print("Redirecting to homepage")
@@ -30,7 +31,7 @@ class DashboardPage:
                 redirecting_guvi.click()
                 # Wain until the webpage loads completely
                 self.wait.until(EC.url_contains("guvi.in"))
-                sleep(15)
+                sleep(50)
             print("Checking the top menu items")
             # Check visibility of all required menu items
             self.wait.until(EC.visibility_of_element_located((By.XPATH, locator.COURSE_MENU)))

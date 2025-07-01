@@ -15,7 +15,7 @@ from TestData import data
 def test_tc_1_url_validity(setup):
     # Assert that the current URL contains "guvi.in"
     assert "guvi.in" in setup.current_url, "URL is not valid"
-    print("URL TEST PASSED")
+    print("PASS : URL TEST")
 
 
 # Test Case 2: Check if the title of the homepage is correct
