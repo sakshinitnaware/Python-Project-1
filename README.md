@@ -1,5 +1,8 @@
 # GUVI Web Application - Automation Testing Framework
 
+
+## Project Objective
+
 **This project is an automation testing framework built to validate key functionalities of the GUVI Web Application. Using Selenium, Pytest, and 
 the Page Object Model (POM) design pattern, the framework ensures modularity, readability, and ease of maintenance.
 The primary focus is on automating and verifying core workflows like login, signup, dashboard UI elements, and logout. 
@@ -10,6 +13,9 @@ and includes logic to re-run failed tests to capture flaky behavior. A merged HT
 showing each test case’s outcomes across trials and summarizing their final status.This project serves as a robust foundation for web 
 automation, with flexible architecture and clear reporting. It's ideal for quality 
 assurance teams aiming to automate UI testing for web apps in an efficient and organized manner.**
+
+## Scope
+**The automation will be designed to perform cross-browser validation across commonly used web browsers (e.g., Chrome, Firefox, Edge, Safari). The system will interact with the web elements and execute test cases covering both positive and negative scenario**
 
 ## 🔧 Tech Stack
 - Selenium
